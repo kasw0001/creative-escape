@@ -6,11 +6,38 @@ import card1 from "../assets/card1.jpg";
 
 <Layout>
   <p>Welcome</p>
-  <Card
-    link="/berlinstreetart"
-    imgsrc={card1}
-    alttext="Street art in Berlin"
-    pretitle="Local CRTV"
-    description="Street Art walk in Berlin that is not your typical East Side Gallery!"
-  />
+  <section class="card-grid">
+    <Card
+      link="/berlinstreetart"
+      imgsrc={card1}
+      alttext="Street art in Berlin"
+      pretitle="Local CRTV"
+      description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+    />
+    <Card
+      link="/berlinstreetart"
+      imgsrc={card1}
+      alttext="Street art in Berlin"
+      pretitle="Local CRTV"
+      description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+    />
+    <Card
+      link="/berlinstreetart"
+      imgsrc={card1}
+      alttext="Street art in Berlin"
+      pretitle="Local CRTV"
+      description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+    />
+  </section>
 </Layout>
+
+<style>
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: center;
+    min-width: none;
+  }
+</style>

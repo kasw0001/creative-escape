@@ -5,13 +5,40 @@ const { imgsrc, description, alttext, pretitle, link } = Astro.props;
 
 <a href={link}>
   <article class="card">
-    <Image src={imgsrc} alt={alttext} width="250" height="150" />
+    <Image
+      src={imgsrc}
+      alt={alttext}
+      width="500"
+      height="200"
+      class="card-img"
+    />
     <p><span>{pretitle}</span> {description}</p>
   </article>
 </a>
 
 <style>
+  .card {
+    gap: 0.5rem;
+    text-align: left;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #787878;
+    color: #fff;
+  }
   span {
     text-decoration: underline;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p {
+    max-width: 300px;
+  }
+
+  .card-img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: cover;
   }
 </style>
