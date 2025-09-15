@@ -1,9 +1,14 @@
+---
+import { Image } from "astro:assets";
+import insta from "../assets/insta.png";
+---
 <footer>
     <h3>DESIGN NEWS TO YOUR INBOX</h3>
     <form class="newsletter">
         <input type="email" placeholder="Email" required />
         <button type="submit">SIGN UP</button>
     </form>
+    <Image src={insta} alt="insta"></Image>
 </footer>
 
 <style>
@@ -12,6 +17,7 @@
         padding: 4rem 2rem;
     }
     h3 {
+        font-family: Inter;
         color: #F9F9F9;
         font-size: 2rem;
     }
