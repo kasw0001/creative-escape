@@ -13,7 +13,7 @@ import Footer from "../components/Footer.astro";
 	</head>
 	<body>
 		<Header />
-		<slot />
+		<main><slot /></main>
 		<Footer />
 	</body>
 </html>
@@ -26,4 +26,8 @@ import Footer from "../components/Footer.astro";
 		height: 100%;
 		background-color: #F5F5F5;
 	}
+	main {
+		margin: 3rem;
+	}
+	
 </style>

@@ -1,10 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import indgangcut from "../assets/indgangcut.png";
+import logo from "../assets/logored.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<p>Welcome</p>
+	<div class="forside">
+		<Image src={logo} alt="logo"></Image>
+		<h1>Welcome</h1>
+		<Image src={indgangcut} alt="whatever">
+	</div>
 </Layout>
+
+<style>
+	@font-face {
+		font-family: Anton;
+		src: url(../assets/Anton-Regular.ttf);
+	}
+	h1 {
+		font-family: Anton;
+		font-weight: lighter;
+		font-size: 300%;
+	}
+</style>
