@@ -8,8 +8,8 @@ const { imgsrc, description, alttext, pretitle, link } = Astro.props;
     <Image
       src={imgsrc}
       alt={alttext}
-      width="500"
-      height="200"
+      width="200"
+      height="100"
       class="card-img"
     />
     <p><span>{pretitle}</span> {description}</p>
@@ -23,12 +23,12 @@ const { imgsrc, description, alttext, pretitle, link } = Astro.props;
     flex: 1;
     height: 100%;
     box-sizing: border-box;
-    width: 400px;
-    text-align: left;
+    width: 200px;
+    text-align: center;
     padding: 1rem;
-    background-color: #9e9e9e;
-    color: #fff;
+    color: #000000;
     margin: 0;
+    text-align: left;
   }
   span {
     text-decoration: underline;
@@ -40,12 +40,14 @@ const { imgsrc, description, alttext, pretitle, link } = Astro.props;
   }
   p {
     font-family: Inter;
+    font-weight: lighter;
+    font-size: small;
     max-width: 300px;
   }
 
   .card-img {
-    width: 100% !important;
-    height: 200px !important;
+    width: 100%;
+    height: 100px;
     object-fit: cover;
   }
 </style>
