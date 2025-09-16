@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import interview from "../assets/interview.png";
+import bartender from "../assets/bartender.png";
+import designer from "../assets/designer.png";
+import sales from "../assets/sales.png";
+---
+
+<Layout>
+    <div class="overskrift">
+        <h1>What inspires people in Berlin?</h1>
+        <p>Berlin is a city known for its vibrant nightlife, bold art scene, and endless creative energy.<br> But when you ask the people living and working here what truly inspires them, the answers are often personal, simple, and deeply human.<br> We spoke to three Berliners from different walks of life about what sparks their creativity and keeps them moving forward.</p>
+        <Image src={interview} alt="inspo"></Image>
+    </div>
+    <div class="personer">
+        <div>
+            <div class="tekst">
+            <h2>The bartender: family first</h2>
+            <p>Working late nights behind the bar, Berlin bartender Jonas finds inspiration not in the chaos of the city, but in the people closest to him.</p>
+            <p class="citat">“My mom, my dad, and my girlfriend inspire me the most,” he says. “They remind me of where I come from and where I want to go. They keep me grounded and motivated.”</p>
+            <p>For Jonas, inspiration is about connection. It's the relationships that shape who he is, even in a city as fast-changing as Berlin.</p>
+            </div>
+            <Image src={bartender} alt="bartender"></Image>
+        </div>
+        <div>
+            <div class="tekst">
+            <h2>The digital designer: A run in nature</h2>
+            <p>Arne, a digital designer living in Berlin, finds his spark far away from the screen. For him, creativity flows best when his body is in motion.</p>
+            <p class="citat">“A run in nature always inspires me,” he explains. “It clears my mind and gives me space to think differently. The rhythm of running somehow opens up new ideas.”</p>
+            <p>Amid Berlin's concrete and noise, Arne turns to nature to reset and rediscover his focus.</p>
+            </div>
+            <Image src={designer} alt="designer"></Image>
+        </div>
+        <div>
+            <div class="tekst">
+            <h2>The sales assistent: Laughter and music</h2>
+            <p>At a L'Occitane store in Mitte, we meet Elena, a sales assistant who instantly lights up when asked about inspiration.</p>
+            <p class="citat">“Laughter and music,” she smiles. “Both bring people together. They make me feel alive and remind me not to take life too seriously.”</p>
+            <p>For Elena, inspiration isn't found in grand gestures, but in moments of joy that connect us all.</p>
+            </div>
+            <Image src={sales} alt="sales"></Image>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    h1 {
+        font-family: Anton;
+		font-weight: lighter;
+		font-size: 300%;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-family: Anton;
+        font-weight: lighter;
+        text-transform: uppercase;
+    }
+    p {
+        font-family: Inter;
+    }
+    .overskrift {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .overskrift img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .overskrift p {
+        padding-bottom: 2rem;
+    }
+    .tekst{
+        padding: 2rem 18rem;
+    }
+    .personer img {
+        max-width: 70%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+    .citat {
+        font-family: Inter thin;
+        font-style: italic;
+    }
+</style>
