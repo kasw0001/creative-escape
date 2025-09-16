@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+const { imgsrc, description, alttext, pretitle, link } = Astro.props;
+---
+
+<a href={link}>
+  <article class="card">
+    <Image
+      src={imgsrc}
+      alt={alttext}
+      width="500"
+      height="200"
+      class="card-img"
+    />
+    <p><span>{pretitle}</span> {description}</p>
+  </article>
+</a>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+    width: 400px;
+    text-align: left;
+    padding: 1rem;
+    background-color: #9e9e9e;
+    color: #fff;
+    margin: 0;
+  }
+  span {
+    text-decoration: underline;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p {
+    max-width: 300px;
+  }
+
+  .card-img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+  }
+</style>

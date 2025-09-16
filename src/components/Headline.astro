@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+const { link, imgsrc, alttext, headlinetitle, headline } = Astro.props;
+---
+
+<a href={link}>
+  <article class="card">
+    <Image
+      src={imgsrc}
+      alt={alttext}
+      width="500"
+      height="200"
+      class="card-img"
+    />
+    <p>{headlinetitle}</p>
+    <h2>{headline}</h2>
+  </article>
+</a>

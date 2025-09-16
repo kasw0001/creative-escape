@@ -1,24 +1,62 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import streetArt from "../assets/streetart.jpg";
+import hiddenGem1 from "../assets/hiddengem1.jpg";
+import berlinBus from "../assets/berlinbus.jpg";
+import Underline from "../components/Underline.astro";
+import Headline from "../components/Headline.astro";
 import indgangcut from "../assets/indgangcut.png";
-import logo from "../assets/logored.png";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<div class="forside">
-		<Image src={logo} alt="logo" height={35}></Image>
-		<h1>WELCOME</h1>
-		<p>Creative Escape is your digital guide to unique travel<br> and creative experiences for those who seek inspiration<br> beyond the ordinary.</p>
-		<Image src={indgangcut} alt="whatever" class="indgang">
-	</div>
+  <section class="headline-section">
+    <Underline
+      featureheadline="FEATURED ARTICLES"
+      articleheadline="UNMISSABLE THINGS TO DO IN BERLIN"
+    />
+  </section>
+  <section class="card-grid">
+    <Card
+      link="/berlinstreetart"
+      imgsrc={streetArt}
+      alttext="Street art in Berlin"
+      pretitle="Local CRTV"
+      description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+    />
+    <Card
+      link="/berlinstreetart"
+      imgsrc={hiddenGem1}
+      alttext="Street art in Berlin"
+      pretitle="Local CRTV"
+      description="Want to be artsy on your travel? Here is a list of our 8 favorite creative events and workshops in Berlin!"
+    />
+    <Card
+      link="/berlinstreetart"
+      imgsrc={berlinBus}
+      alttext="Street art in Berlin"
+      pretitle="Local CRTV"
+      description="Travel as a creative - Experiene like a local. Showing you the hidden gems of Berlin that you won’t find in the mainstream trave lguides."
+    />
+  </section>
 </Layout>
 
 <style>
-	h1 {
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .headline-section {
+    justify-content: center;
+    margin-top: 2rem;
+    margin: auto;
+    width: 1200px;
+  }
+  	h1 {
 		font-family: Anton;
 		font-weight: lighter;
 		font-size: 300%;
