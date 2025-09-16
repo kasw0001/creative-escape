@@ -1,37 +1,199 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import streetArt from "../assets/streetart.jpg";
+import hiddenGem1 from "../assets/hiddengem1.jpg";
+import berlinBus from "../assets/berlinbus.jpg";
+import Underline from "../components/Underline.astro";
+import Underline2 from "../components/Underline2.astro";
 import { Image } from "astro:assets";
-import indgangcut from "../assets/indgangcut.png";
+import indganghaus from "../assets/indganggem.jpg";
 import logo from "../assets/logored.png";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Headline from "../components/Headline.astro";
+import Duoarticles from "../components/Duoarticles.astro";
+import Articlerow from "../components/Articlerow.astro";
+import eventimg from "../assets/eventimg.png";
+import streetart2 from "../assets/streetart2.jpg";
+import streetart3 from "../assets/streetart3.jpg";
+import traveltip from "../assets/traveltip.png";
+import localinterview from "../assets/localinterview.png";
+import lovebook from "../assets/lovebook.jpg";
 ---
 
 <Layout>
-	<div class="forside">
-		<Image src={logo} alt="logo" height={35}></Image>
-		<h1>WELCOME</h1>
-		<p>Creative Escape is your digital guide to unique travel<br> and creative experiences for those who seek inspiration<br> beyond the ordinary.</p>
-		<Image src={indgangcut} alt="whatever" class="indgang">
-	</div>
-</Layout>
+  <div class="forside">
+    <Image src={logo} alt="logo" height="35" class="logo-landing" />
+    <h1 class="landing-header">WELCOME</h1>
+    <p class="landing-text">
+      Creative Escape is your digital guide to unique travel<br /> and creative experiences
+      for those who seek inspiration<br /> beyond the ordinary.
+    </p>
 
-<style>
-	h1 {
-		font-family: Anton;
-		font-weight: lighter;
-		font-size: 300%;
-	}
-	.forside p {
-		font-family: Inter;
-		text-transform: uppercase;
-		font-size: 150%;
-	}
-	.indgang {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    <section class="landing-article">
+      <Headline
+        link="/berlinstreetart"
+        imgsrc={indganghaus}
+        alttext="Street art in Berlin"
+        headlinetitle="UNMISSABLE FREE GEMS"
+        headline="HAUS SCHWARZENBERG - BERLIN'S HIDDEN GEM FULL OF ART AND ACTIVITIES"
+      />
+    </section>
+    <section class="headline-grid">
+      <Underline
+        featureheadline="FEATURED ARTICLES"
+        articleheadline="UNMISSABLE THINGS TO DO IN BERLIN"
+      />
+    </section>
+    <section class="card-grid">
+      <Card
+        link="/berlinstreetart"
+        imgsrc={streetArt}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+      />
+      <Card
+        link="/berlinstreetart"
+        imgsrc={hiddenGem1}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Want to be artsy on your travel? Here is a list of our 8 favorite creative events and workshops in Berlin!"
+      />
+      <Card
+        link="/berlinstreetart"
+        imgsrc={berlinBus}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Travel as a creative - Experiene like a local. Showing you the hidden gems of Berlin that you won’t find in the mainstream trave lguides."
+      />
+    </section>
+    <section class="duo-articles">
+      <Duoarticles
+        link="/berlinstreetart"
+        imgsrc={eventimg}
+        alttext="UNMISSABLE FREE GEMS"
+        pretitle="Local CRTV"
+        description="GUIDE: 10 BEST COFFEE SPOTS"
+      />
+      <Duoarticles
+        link="/berlinstreetart"
+        imgsrc={localinterview}
+        alttext="INTERVIEW WITH LOCALS"
+        pretitle="Local CRTV"
+        description="INTERVIEW WITH LOCAL CREATIVES"
+      />
+    </section>
+    <section class="underline2">
+      <Underline2
+        featureheadline="FEATURED ARTICLES"
+        articleheadline="LOCAL CREATIVES RECOMMENDATIONS"
+      />
+    </section>
+    <section class="article-row">
+      <Articlerow
+        link="/berlinstreetart"
+        imgsrc={streetart2}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Street art is more than just pictures – it’s a movement. Meet the artists who create stories on the walls"
+      />
+      <Articlerow
+        link="/berlinstreetart"
+        imgsrc={berlinBus}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Budget-friendly travel tips from locals: How to explore Berlin without breaking the bank!"
+      />
+      <Articlerow
+        link="/berlinstreetart"
+        imgsrc={traveltip}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Don’t travel like a tourist—travel like a creative. We show you how to see the city through the eyes of an artist!"
+      />
+      <Articlerow
+        link="/berlinstreetart"
+        imgsrc={streetart3}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+      />
+      <Articlerow
+        link="/berlinstreetart"
+        imgsrc={lovebook}
+        alttext="Street art in Berlin"
+        pretitle="Local CRTV"
+        description="Tired of generic travel tips? We show you the hidden street art spots only locals know."
+      />
+    </section>
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+      background-color: #f5f5f5;
     }
-</style>
+
+    .logo-landing,
+    .landing-header,
+    .landing-text {
+      margin-left: 100px;
+    }
+
+    .landing-article {
+      text-decoration: none;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .headline-grid {
+      justify-content: center;
+      margin-top: 2rem;
+      margin: auto;
+      width: 1200px;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-family: Anton;
+      font-weight: lighter;
+      font-size: 300%;
+    }
+    .forside p {
+      font-family: Inter;
+      text-transform: uppercase;
+      font-size: 150%;
+    }
+
+    .duo-articles {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .article-row {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      gap: 45px;
+      margin-bottom: 100px;
+    }
+  </style>
+</Layout>

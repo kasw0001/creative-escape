@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+const { imgsrc, description, alttext, pretitle, link } = Astro.props;
+---
+
+<a href={link}>
+  <article class="duoarticle">
+    <Image
+      src={imgsrc}
+      alt={alttext}
+      width="600"
+      height="300"
+      class="card-img"
+    />
+    <p><span>{pretitle}</span></p>
+    <h2>{description}</h2>
+  </article>
+</a>
+
+<style>
+  .duoarticle {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    padding-inline: 4rem;
+    color: #000000;
+    margin: 0;
+  }
+  span {
+    text-decoration: underline;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+  }
+  p,
+  h2 {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  p {
+    font-family: Inter;
+  }
+  h2 {
+    font-family: Anton;
+    margin-top: 5px;
+    font-weight: lighter;
+    font-size: x-large;
+  }
+  .card-img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    align-self: center;
+    object-fit: cover;
+  }
+</style>

@@ -1,0 +1,42 @@
+---
+const { featureheadline, articleheadline } = Astro.props;
+---
+
+<div class="headline-card">
+  <p>
+    {featureheadline}
+  </p>
+  <hr />
+  <h2>{articleheadline}</h2>
+</div>
+
+<style>
+  .headline-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    color: #000000;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #d40000;
+    width: 1250px;
+    margin: auto;
+  }
+
+  p {
+    font-family: Inter;
+    margin-left: 60px;
+    font-size: small;
+  }
+
+  h2 {
+    font-family: Anton;
+    font-weight: lighter;
+    margin-left: 60px;
+    margin-top: 10px;
+  }
+</style>
