@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import indgangcut from "../assets/indgangcut.png";
+import logo from "../assets/logored.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="forside">
+		<Image src={logo} alt="logo" height={35}></Image>
+		<h1>WELCOME</h1>
+		<p>Creative Escape is your digital guide to unique travel<br> and creative experiences for those who seek inspiration<br> beyond the ordinary.</p>
+		<Image src={indgangcut} alt="whatever" class="indgang">
+	</div>
 </Layout>
+
+<style>
+	h1 {
+		font-family: Anton;
+		font-weight: lighter;
+		font-size: 300%;
+	}
+	.forside p {
+		font-family: Inter;
+		text-transform: uppercase;
+		font-size: 150%;
+	}
+	.indgang {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+</style>

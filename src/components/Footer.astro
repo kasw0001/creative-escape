@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import insta from "../assets/insta.png";
+---
+<footer>
+    <h3>DESIGN NEWS TO YOUR INBOX</h3>
+    <form class="newsletter">
+        <input type="email" placeholder="Email" required />
+        <button type="submit">SIGN UP</button>
+    </form>
+    <a href="https://www.instagram.com/spencer_henee?utm_source=ig_web_button_share_sheet&igsh=bG5kYWxleHAzNWh4" target="_blank" rel="noopener noreferrer">
+    <Image src={insta} alt="insta"></Image>
+    </a>
+</footer>
+
+<style>
+    footer {
+        background-color: #313131;
+        padding: 4rem 2rem;
+    }
+    h3 {
+        font-family: Inter;
+        color: #F9F9F9;
+        font-size: 2rem;
+    }
+    .newsletter {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 3rem;
+        max-width: 500px;
+    }
+    .newsletter input{
+        flex: 1;
+        padding: 0.8rem 1rem;
+        border: none;
+        font-size: 1rem;
+    }
+    .newsletter button{
+        background-color: #CA0A0D;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        cursor: pointer;
+    }
+    .newsletter button:hover{
+        background-color: #a8080a;
+    }
+</style>
