@@ -1,32 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import card1 from "../assets/card1.jpg";
+import streetArt from "../assets/streetart.jpg";
+import hiddenGem1 from "../assets/hiddengem1.jpg";
+import berlinBus from "../assets/berlinbus.jpg";
+import Underline from "../components/Underline.astro";
+import Headline from "../components/Headline.astro";
 ---
 
 <Layout>
-  <p>Welcome</p>
+  <section class="headline-section">
+    <Underline
+      featureheadline="FEATURED ARTICLES"
+      articleheadline="UNMISSABLE THINGS TO DO IN BERLIN"
+    />
+  </section>
   <section class="card-grid">
     <Card
       link="/berlinstreetart"
-      imgsrc={card1}
+      imgsrc={streetArt}
       alttext="Street art in Berlin"
       pretitle="Local CRTV"
       description="Street Art walk in Berlin that is not your typical East Side Gallery!"
     />
     <Card
       link="/berlinstreetart"
-      imgsrc={card1}
+      imgsrc={hiddenGem1}
       alttext="Street art in Berlin"
       pretitle="Local CRTV"
-      description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+      description="Want to be artsy on your travel? Here is a list of our 8 favorite creative events and workshops in Berlin!"
     />
     <Card
       link="/berlinstreetart"
-      imgsrc={card1}
+      imgsrc={berlinBus}
       alttext="Street art in Berlin"
       pretitle="Local CRTV"
-      description="Street Art walk in Berlin that is not your typical East Side Gallery!"
+      description="Travel as a creative - Experiene like a local. Showing you the hidden gems of Berlin that you won’t find in the mainstream trave lguides."
     />
   </section>
 </Layout>
@@ -36,8 +45,14 @@ import card1 from "../assets/card1.jpg";
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 2rem;
     justify-content: center;
-    min-width: none;
+    margin-bottom: 50px;
+  }
+
+  .headline-section {
+    justify-content: center;
+    margin-top: 2rem;
+    margin: auto;
+    width: 1200px;
   }
 </style>
