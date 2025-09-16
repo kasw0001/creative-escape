@@ -6,10 +6,18 @@ import hiddenGem1 from "../assets/hiddengem1.jpg";
 import berlinBus from "../assets/berlinbus.jpg";
 import Underline from "../components/Underline.astro";
 import Headline from "../components/Headline.astro";
+import { Image } from "astro:assets";
 import indgangcut from "../assets/indgangcut.png";
+import logo from "../assets/logored.png";
 ---
 
 <Layout>
+	<div class="forside">
+		<Image src={logo} alt="logo" height={35}></Image>
+		<h1>WELCOME</h1>
+		<p>Creative Escape is your digital guide to unique travel<br> and creative experiences for those who seek inspiration<br> beyond the ordinary.</p>
+		<Image src={indgangcut} alt="whatever" class="indgang">
+	</div>
   <section class="headline-section">
     <Underline
       featureheadline="FEATURED ARTICLES"
