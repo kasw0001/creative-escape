@@ -3,49 +3,50 @@ import { Image } from "astro:assets";
 import logolille from "../assets/logolille.png";
 import logolillered from "../assets/logolillered.png";
 ---
+
 <header>
-    <nav class="nav-bar">
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/interview">Contact</a></li>
-      </ul>
-      <a href="/" class="logo-link">
-      <Image src={logolille} alt="logolille"></Image>
-      </a>
-    </nav>
+  <nav class="nav-bar">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="/" class="logo-link">
+      <Image src={logolille} alt="logolille" />
+    </a>
+  </nav>
 </header>
 
 <style>
-    header {
-        background-color: white;
-        padding: 1rem 1rem;
-    }
-    .nav-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-    }
-    nav a {
-        color: black;
-        font-family: Anton;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    nav a:hover {
-        color: #CA0A0D;
-        text-shadow: 5px 5px 5px rgba(140, 140, 140, 0.8);
-        transition: all 0.2s ease-in;
-    }
-    .nav-bar img {
-        margin-right: 1rem;
-    }
-    .nav-bar img:hover {
-        display: block;
-    }
+  header {
+    background-color: white;
+    padding: 1rem 1rem;
+  }
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  nav a {
+    color: black;
+    font-family: Anton;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  nav a:hover {
+    color: #ca0a0d;
+    text-shadow: 5px 5px 5px rgba(140, 140, 140, 0.8);
+    transition: all 0.2s ease-in;
+  }
+  .nav-bar img {
+    margin-right: 1rem;
+  }
+  .nav-bar img:hover {
+    display: block;
+  }
 </style>
